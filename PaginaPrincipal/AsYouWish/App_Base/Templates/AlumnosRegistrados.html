@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista-AYW</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Lista de Alumnos Registrados</h1>
+
+		<p><strong>Instrucciones:</strong> Como se puede ver en la Lista, tiene a disposicion todos los Alumnos registrados en nuestra Base de Datos. Para realizar algun cambio tan solo debe ingresar al <strong>Modificar o Eliminar</strong> de un Alumno especifico. Tambien Puede usar la Barra de Busqueda para encontrar al Alumno especifico.</p>
+		<p><strong>Total de Alumnos Registrados Actualmente: {{Lista_Alumnos|length}}</strong></p>
+		<form action="/buscar/" method="GET">
+			<strong><label for="Barra Busqueda">Barra de Busqueda:</label></strong><input type="text" placeholder="Ingrese cualquier Parametro para Identificarlo" size="35" id="Barra Busqueda" name="Nombre_B">
+		</form>
+
+		<table>
+			<tr>
+				<th>RUT Alumno</th>
+				<th>Nombre Alumno</th>
+				<th>Email Alumno</th>
+			</tr>
+			{% for Alumn in Lista_Alumnos %}
+			<tr>
+				<td>{{Alumn.RUT}}</td>
+				<td>{{Alumn.Nombre}}</td>
+				<td>{{Alumn.Email}}</td>
+				<td>
+					<a href="http://127.0.0.1:8000/Modificar_Alumno/{{Alumn.id}}/">Modificar</a>
+					<a href="http://127.0.0.1:8000/Eliminar_Alumno/{{Alumn.id}}/">Eliminar</a>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+		<a href="http://127.0.0.1:8000/">Regresar a la Pagina Principal</a>
+</body>
+</html>
