@@ -4,7 +4,7 @@
 	<title>Login</title>
 </head>
 <body>
-	<h3>Requiere de un Login:</h3>
+	<h3 style="background-color:red; color:white; text-align:center;">Requiere de un Login:</h3>
 	<form action="" method="POST">{% csrf_token %}
 		<table>
 			{{form.as_table}}
