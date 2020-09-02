@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4156366f-d5ca-4582-b2e5-075e1614e8af" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/AsYouWish/App_Base/Templates/Inicio.html" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/App_Base/Templates/Inicio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AsYouWish/App_Base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/App_Base/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AsYouWish/AsYouWish/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/AsYouWish/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AsYouWish/db.sqlite3" beforeDir="false" />
+    </list>
+    <list id="4e740a08-f69b-4167-890e-27d8a9744dfb" name="New Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/AsYouWish/App_Base/Templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/App_Base/Templates/registration/login.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1gpgCUiVFEkPD5nGVdHopvHorvX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Ingeniería de Software I/Aplicacion" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Boss7\Documents\UNAB\Año 4 (2020)\ICF232_202010_AsYourWish\PaginaPrincipal\AsYouWish\App_Base\Templates" />
+      <recent name="C:\Users\Boss7\Documents\UNAB\Año 4 (2020)\ICF232_202010_AsYourWish\PaginaPrincipal\AsYouWish\Base_User\templates" />
+      <recent name="C:\Users\Boss7\Documents\UNAB\Año 4 (2020)\ICF232_202010_AsYourWish\PaginaPrincipal\AsYouWish\App_Base\Templates\registration" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4156366f-d5ca-4582-b2e5-075e1614e8af" name="Default Changelist" comment="" />
+      <changelist id="4e740a08-f69b-4167-890e-27d8a9744dfb" name="New Changelist" comment="" />
+      <created>1598816822072</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598816822072</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598845511967">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1280.687/0.0.1536.824@0.0.1536.824" timestamp="1598845511967" />
+    <state x="526" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598829504876">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="526" y="202" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1280.687/0.0.1536.824@0.0.1536.824" timestamp="1598829504876" />
+    <state x="512" y="247" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1598845264230">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="512" y="247" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-1920.0.1280.687/0.0.1536.824@0.0.1536.824" timestamp="1598845264230" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1598843473019">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/-1920.0.1280.687/0.0.1536.824@0.0.1536.824" timestamp="1598843473019" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1599011168210">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/-1920.0.1280.687/0.0.1536.824@0.0.1536.824" timestamp="1598846385847" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599011168210" />
+    <state x="618" y="320" key="VCS.ChangelistChooser" timestamp="1598843411360">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="618" y="320" key="VCS.ChangelistChooser/-1920.0.1280.687/0.0.1536.824@0.0.1536.824" timestamp="1598843411360" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1598844745656">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-1920.0.1280.687/0.0.1536.824@0.0.1536.824" timestamp="1598844745656" />
+    <state x="93" y="93" width="1350" height="638" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598845711019">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.0.1280.687/0.0.1536.824@0.0.1536.824" timestamp="1598845711019" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599013152574">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599013152574" />
+  </component>
+</project>
