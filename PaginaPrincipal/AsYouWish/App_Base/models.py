@@ -1,5 +1,8 @@
 from django.db import models
+from django.contrib.auth.models import BaseUserManager
 # Create your models here.
+
+
 
 #Tabla de Clase Alumno
 class Alumno(models.Model):#models.Model-->Trabajaremos en estilo Model

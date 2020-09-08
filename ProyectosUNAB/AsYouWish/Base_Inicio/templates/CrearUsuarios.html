@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+</head>
+<body>
+	<h3 style="background-color:red; color:white; text-align:center;">Registrar como Usuario:</h3>
+	<form action="" method="POST">{% csrf_token %}
+		<table>
+			{{form.as_p}}
+		</table>
+		<input type="submit" name="Sign Up">
+	</form>
+
+</body>
+</html>

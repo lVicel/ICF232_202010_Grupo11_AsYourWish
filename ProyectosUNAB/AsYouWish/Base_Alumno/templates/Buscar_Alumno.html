@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista-AYW</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Resultados de Busqueda</h1>
+
+		<table>
+			<tr>
+				<th>RUT Alumno</th>
+				<th>Nombre Alumno</th>
+				<th>Nacimiento Alumno</th>
+				<th>Profesion Alumno</th>
+				<th>DirPersonal Alumno</th>
+				<th>DirLaboral Alumno</th>
+				<th>Asistencias Alumno</th>
+			</tr>
+			{% for Alumn in Alumno_Encontrado %}
+			<tr>
+				<td>{{Alumn.RUT}}</td>
+				<td>{{Alumn.Nombre}}</td>
+				<td>{{Alumn.Nacimiento}}</td>
+				<td>{{Alumn.Profesion}}</td>
+				<td>{{Alumn.DirPersonal}}</td>
+				<td>{{Alumn.DirLaboral}}</td>
+				<td>{{Alumn.Asistencias}}</td>
+				<td>
+					<a href="http://127.0.0.1:8000/Modificar_Alumno/{{Alumn.id}}/">Modificar</a>
+					<a href="http://127.0.0.1:8000/Eliminar_Alumno/{{Alumn.id}}/">Eliminar</a>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+		<br>
+		<a href="http://127.0.0.1:8000/Listado_Alumnos/">Regresar</a><br>
+		<a href="http://127.0.0.1:8000/">Regresar a la Pagina Principal</a>
+</body>
+</html>
