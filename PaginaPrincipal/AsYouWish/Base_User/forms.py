@@ -13,9 +13,3 @@ class UsuarioForm(UserCreationForm):
 				'email',
 				'rut',
 			]
-		labels = {
-			'username': 'Nombre de usuario',
-			'rut': 'Rut',
-			'email': 'Correo',
-		}
-

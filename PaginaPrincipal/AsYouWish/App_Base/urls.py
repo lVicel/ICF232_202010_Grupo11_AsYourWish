@@ -10,5 +10,4 @@ path('Modificar_Alumno/<id>/', views.Modificar_Pag),
 path('Eliminar_Alumno/<id>/', views.Eliminar_Pag),
 url('buscar/', views.BuscarAlumnos),
 path('accounts/', include('django.contrib.auth.urls')),#Creamos una URL para nuestro Login
-path('CrearUsuarios/', views.CrearUsuario.as_view()),
 ]

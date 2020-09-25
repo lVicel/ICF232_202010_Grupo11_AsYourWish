@@ -7,7 +7,7 @@ from django.views.generic import CreateView
 from django.urls import reverse_lazy
 from django.http import HttpResponse
 from django.db.models import Q
-from App_Base.forms import AlumnoForm, UsuarioForm
+from App_Base.forms import AlumnoForm
 from App_Base.models import Alumno
 
 
@@ -71,10 +71,3 @@ def BuscarAlumnos(request):
         ).distinct()
 
     return render(request, "Buscar_Alumno.html", {"Alumno_Encontrado": Alumn})
-
-
-class CrearUsuario(CreateView):
-    model = User
-    template_name = "CrearUsuarios.html"
-    form_class = UsuarioForm
-    success_url = reverse_lazy('login')
