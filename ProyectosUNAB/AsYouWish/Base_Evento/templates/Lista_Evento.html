@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista-AYW</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Lista de Eventos Disponibles</h1>
+		<form action="/Buscar_Event/" method="GET">
+			<strong><label for="Barra Busqueda">Barra de Busqueda:</label></strong><input type="text" placeholder="Ingrese cualquier Parametro para Identificarlo" size="35" id="Barra Busqueda" name="Nombre_B">
+		</form>
+		<a href="http://127.0.0.1:8000/Registrar_Evento/"><button>Registrar</button></a>
+
+		<table>
+			<tr>
+				<th>Nombre Evento</th>
+				<th>Fecha</th>
+				<th>Horario Inicio</th>
+				<th>Horario Termino</th>
+				<th>Local Encargado</th>
+				<th>Lugar</th>
+			</tr>
+            {% for Event in Lista_Eventos %}
+			<tr>
+				<td>{{Event.NombreEvent}}</td>
+				<td>{{Event.FechaEvent}}</td>
+				<td>{{Event.EventInicio}}</td>
+				<td>{{Event.EventTermino}}</td>
+				<td>{{Event.LocalAdmin}}</td>
+				<td>{{Event.Direccion}}</td>
+				<td>
+					<a href="http://127.0.0.1:8000/Modificar_Evento/{{Event.id}}/"><button>Modificar</button></a>
+					<a href="http://127.0.0.1:8000/Eliminar_Evento/{{Event.id}}/"><button>Eliminar</button></a>
+					<a href="https://www.google.com/"><button>Participantes</button></a>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+		<a href="http://127.0.0.1:8000/">Regresar a la Pagina Principal</a>
+</body>
+</html>

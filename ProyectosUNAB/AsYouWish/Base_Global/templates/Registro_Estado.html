@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Estado - Mensual</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Estado Mensual As You Wish</h1>
+
+		
+		<!--<form action="/buscar/" method="GET">
+			<strong><label for="Barra Busqueda">Barra de Busqueda:</label></strong><input type="text" placeholder="Ingrese cualquier Parametro para Identificarlo" size="35" id="Barra Busqueda" name="Nombre_B">
+		</form>
+		<a href="http://127.0.0.1:8000/Registrar_Alumnos/"><button>Registrar</button></a>-->
+		<table>
+			<tr>
+				<th>Año</th>
+                <th>Mes</th>
+                <th>Promedio Ingresos</th>
+                <th>Promedio Asistencia</th>
+                <th>Promedio Alumnos Nuevos</th>
+                
+			</tr>
+			{% for Est in Lista_Estado %}
+			<tr>
+                <td>{{Est.Anno}}</td>
+                <td>{{Est.Mes}}</td>
+                <td>{{Est.PromedioIngreso}}</td>
+                <td>{{Est.PromedioAsist}}</td>
+                <td>{{Est.AlumnosNuevos}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+		<a href="http://127.0.0.1:8000/">Regresar a la Pagina Principal</a>
+</body>
+</html>

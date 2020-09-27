@@ -43,6 +43,11 @@ INSTALLED_APPS = [
     'Base_Inicio',
     'Base_Alumno',
     'Base_User',
+    'Base_Clase',
+    'Base_Global',
+    'Base_Local',
+    'Base_Evento',
+    'Base_Profesor',
 ]
 
 MIDDLEWARE = [

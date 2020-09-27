@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista-Clase</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Clases Disponibles del Local</h1>
+
+		<p><strong>Total de Clases Registrados Actualmente: {{Lista_CLASES|length}}</strong></p>
+		<form action="/buscar_Clase/" method="GET">
+			<strong><label for="Barra Busqueda">Barra de Busqueda:</label></strong><input type="text" placeholder="Ingrese cualquier Parametro para Identificarlo" size="35" id="Barra Busqueda" name="Nombre_B">
+		</form>
+		<a href="http://127.0.0.1:8000/Registrar_Clase/"><button>Registrar Clase</button></a>
+        
+		<table>
+			<tr>
+				<th>Nombre de la Clase</th>
+				<th>Horario Inicio</th>
+				<th>Horario Termino</th>
+				<th>Profesor en Jefe</th>
+				<th>Asistencia de Hombres</th>
+				<th>Asistencia de Mujeres</th>
+				<th>Asistencias Totales</th>
+				<th>Porcentaje de Asistencias</th>
+				<th>Numero Pase Vencidos</th>
+			</tr>
+			{% for Claz in Lista_CLASES %}
+			<tr>
+				<td>{{Claz.NombreClas}}</td>
+				<td>{{Claz.ClassInicio}}</td>
+				<td>{{Claz.ClassTermino}}</td>
+				<td>{{Claz.Profesor}}</td>
+				<td>{{Claz.AsistHombres}}</td>
+				<td>{{Claz.AsistMujeres}}</td>
+				<td>{{Claz.AsistTotales}}</td>
+				<td>{{Claz.AsistPorcentaje}}</td>
+				<td>{{Claz.PaseVencidos}}</td>
+				<td>
+					<a href="http://127.0.0.1:8000/Modificar_Clase/{{Claz.id}}/"><button>Modificar</button></a>
+					<a href="http://127.0.0.1:8000/Eliminar_Clase/{{Claz.id}}/"><button>Eliminar</button></a>
+					<a href="https://www.google.com/"><button>Participantes</button></a>
+					<a href="https://www.google.com/"><button>Ingresos</button></a>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+		<a href="http://127.0.0.1:8000/">Regresar a la Pagina Principal</a>
+</body>
+</html>

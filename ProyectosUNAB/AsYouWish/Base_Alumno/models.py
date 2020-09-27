@@ -4,11 +4,14 @@ from django.db import models
 class Alumno(models.Model):
     RUT=models.CharField(max_length=13)
     Nombre=models.CharField(max_length=30)
+    Genero=models.CharField(max_length=6)
     Nacimiento=models.DateField()
     Profesion=models.CharField(max_length=50)
     DirPersonal=models.CharField(max_length=50)
     DirLaboral=models.CharField(max_length=50)
     Asistencias=models.IntegerField()
+    Email=models.EmailField(blank=True, null=True)
+    Ntelefono=models.IntegerField(blank=True, null=True)
 
 
 

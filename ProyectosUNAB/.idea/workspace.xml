@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e9ec1acd-4aab-4e98-8ea0-37498ebb17c8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ProyectosUNAB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProyectosUNAB.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AsYouWish/AsYouWish/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/AsYouWish/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AsYouWish/AsYouWish/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/AsYouWish/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Alumno/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Alumno/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/templates/Buscar_Alumno.html" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Alumno/templates/Buscar_Alumno.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/templates/Lista_Alumno.html" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Alumno/templates/Lista_Alumno.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Alumno/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Inicio/templates/CrearUsuarios.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Inicio/templates/Inicio.html" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Inicio/templates/Inicio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Inicio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Inicio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AsYouWish/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/db.sqlite3" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1i4LAOuiDUtuG212jiBjJjwS6LH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e9ec1acd-4aab-4e98-8ea0-37498ebb17c8" name="Default Changelist" comment="" />
+      <created>1601161774770</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601161774770</updated>
+    </task>
+    <servers />
+  </component>
+</project>

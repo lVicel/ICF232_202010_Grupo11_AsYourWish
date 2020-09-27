@@ -10,24 +10,32 @@
 			<tr>
 				<th>RUT Alumno</th>
 				<th>Nombre Alumno</th>
+				<th>Genero</th>
 				<th>Nacimiento Alumno</th>
 				<th>Profesion Alumno</th>
 				<th>DirPersonal Alumno</th>
 				<th>DirLaboral Alumno</th>
 				<th>Asistencias Alumno</th>
+				<th>Email Alumno</th>
+				<th>Telefono Alumno</th>
 			</tr>
 			{% for Alumn in Alumno_Encontrado %}
 			<tr>
 				<td>{{Alumn.RUT}}</td>
 				<td>{{Alumn.Nombre}}</td>
+				<td>{{Alumn.Genero}}</td>
 				<td>{{Alumn.Nacimiento}}</td>
 				<td>{{Alumn.Profesion}}</td>
 				<td>{{Alumn.DirPersonal}}</td>
 				<td>{{Alumn.DirLaboral}}</td>
 				<td>{{Alumn.Asistencias}}</td>
+				<td>{{Alumn.Email}}</td>
+				<td>{{Alumn.Ntelefono}}</td>
 				<td>
-					<a href="http://127.0.0.1:8000/Modificar_Alumno/{{Alumn.id}}/">Modificar</a>
-					<a href="http://127.0.0.1:8000/Eliminar_Alumno/{{Alumn.id}}/">Eliminar</a>
+					<a href="http://127.0.0.1:8000/Modificar_Alumno/{{Alumn.id}}/"><button>Modificar</button></a>
+					<a href="http://127.0.0.1:8000/Eliminar_Alumno/{{Alumn.id}}/"><button>Eliminar</button></a>
+					<a href="https://www.google.com/"><button>Clases</button></a>
+					<a href="https://www.google.com/"><button>Locales</button></a>
 				</td>
 			</tr>
 			{% endfor %}
