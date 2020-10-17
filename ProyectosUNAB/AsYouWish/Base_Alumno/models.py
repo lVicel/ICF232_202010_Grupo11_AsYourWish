@@ -13,11 +13,13 @@ class Alumno(models.Model):
     Email=models.EmailField(blank=True, null=True)
     Ntelefono=models.IntegerField(blank=True, null=True)
 
+
 class PagosAlumno(Alumno):
+    fields = ('Nombre','RUT')
     FechaIngresos=models.DateField()
-    ClasePagada=models.CharField()
+    ClasePagada=models.CharField(max_length=30)
     IngresoAlumnno=models.IntegerField()
-    MetodoPago=models.CharField()
+    MetodoPago=models.CharField(max_length=30)
 
 
 
