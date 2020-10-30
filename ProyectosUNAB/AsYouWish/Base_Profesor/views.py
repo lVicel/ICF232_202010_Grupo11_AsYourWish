@@ -5,16 +5,20 @@ from Base_Profesor.forms import ProfesorForm
 from Base_Profesor.models import Profesor
 from django.http import HttpResponse
 from django.db.models import Q
+from Base_Profesor.filters import Filtro_Profesor
 
 # Create your views here.
 @login_required
-def Lista_PagProfe(request):
+def Lista_Profesores(request):
 	Lst_Profesor=Profesor.objects.all()
-	return render(request,"Lista_Profesor.html",{"Lista_Profesor":Lst_Profesor})
+	Filtro_Profe = Filtro_Profesor(request.GET, queryset=Lst_Profesor)
+	Lst_Profesor = Filtro_Profe.qs
+	context = {"Lista_HTML":Lst_Profesor, "Filtro":Filtro_Profe}
+	return render(request,"Lista_Profesor.html",context)
 
 
 @login_required
-def Registrar_PagProfe(request):
+def Registrar_Profesores(request):
 	data={
 		'form': ProfesorForm()
 	}
@@ -28,7 +32,7 @@ def Registrar_PagProfe(request):
 
 
 @login_required
-def Modificar_PagProfe(request, id):
+def Modificar_Profesores(request, id):
 	Profe= Profesor.objects.get(id=id)
 	data={
 		'form':ProfesorForm(instance=Profe)
@@ -38,26 +42,17 @@ def Modificar_PagProfe(request, id):
 		formulario =  ProfesorForm(data=request.POST, instance=Profe)
 		if formulario.is_valid():
 			formulario.save()
-			data['mensaje']="Se Modifico correctamente el Alumno"
+			data['mensaje']="Modificacion Completada"
 			data['form']=formulario
+		else:
+			data['mensaje']="Ocurrio un ERROR al Modificar"
 	return render(request,"Modificar_Profesor.html", data)
 
 
 
 @login_required
-def Eliminar_PagProfe(request, id):
+def Eliminar_Profesores(request, id):
 	Profe=Profesor.objects.get(id=id)
 	Profe.delete()
-	return redirect("http://127.0.0.1:8000/Listado_Profesor/")
+	return redirect("/Listado_Profesores/")
 
-
-@login_required
-def BuscarProfesor(request):
-	Busqueda = request.GET.get("Nombre_B")
-	Profe = Profesor.objects.all()
-	if Busqueda:
-		Profe = Profesor.objects.filter(
-			Q(NombreProf__icontains=Busqueda)#Revisa cada Campo de "Nombre"
-			).distinct()
-
-	return render(request,"Buscar_Profesor.html", {"Profesor_Encontrado":Profe})

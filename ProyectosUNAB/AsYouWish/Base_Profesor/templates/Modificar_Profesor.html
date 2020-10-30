@@ -7,7 +7,7 @@
 	<h1 style="background-color:red; color:white; text-align:center;">Modificar Profesor</h1>
 	<form action="" method="POST">{% csrf_token %}
 		<table>
-			{{ form}}
+			{{form}}
 		</table>
 		<br>
 		<input type="reset" name="Limpiar">
@@ -17,7 +17,9 @@
 	<h4 style="background-color:silver; color:white; text-align:center;">{{mensaje}}</h4>
 	<br>
 	<br>
-	<a href="http://127.0.0.1:8000/Listado_Profesor/">Regresar</a>
+	<a href="/Listado_Profesores/">Regresar</a>
+	<p></p>
+	<a href="/Inicio_Gestion/">Regresar a la Pagina de Gestion</a>
 
 
 </body>

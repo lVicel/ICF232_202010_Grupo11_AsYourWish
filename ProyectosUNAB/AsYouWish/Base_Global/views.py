@@ -10,4 +10,4 @@ from django.db.models import Q
 @login_required
 def Registro_Mensual(request):
 	Lst_Estado=EstadoMensual.objects.all()
-	return render(request,"Registro_Estado.html",{"Lista_Estado":Lst_Estado})
+	return render(request,"Registro_Estado.html",{"Lista_HTML":Lst_Estado})

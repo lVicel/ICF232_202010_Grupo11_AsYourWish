@@ -6,11 +6,14 @@
 <body>
 		<h1 style="background-color:red; color:white; text-align:center;">Lista de Profesores Registrados</h1>
 
-		<p><strong>Total de Profesores Registrados Actualmente: {{Lista_Profesor|length}}</strong></p>
-		<form action="/buscar_Prof/" method="GET">
-			<strong><label for="Barra Busqueda">Barra de Busqueda:</label></strong><input type="text" placeholder="Ingrese cualquier Parametro para Identificarlo" size="35" id="Barra Busqueda" name="Nombre_B">
-		</form>
-		<a href="http://127.0.0.1:8000/Registrar_Profesor/"><button>Registrar</button></a>
+		<p><strong>Total de Profesores Registrados Actualmente: {{Lista_HTML|length}}</strong></p>
+		
+		<form method="GET" action="/Listado_Profesores/">
+            {{Filtro.form}}
+            <button class="btn btn-primary" type="submit">Buscar</button>
+        </form>
+
+		<a href="/Registrar_Profesor/"><button>Registrar</button></a>
 
 		<table>
 			<tr>
@@ -21,7 +24,7 @@
 				<th>Email Profesor</th>
 				<th>Telefono Profesor</th>
 			</tr>
-			{% for Profe in Lista_Profesor %}
+			{% for Profe in Lista_HTML %}
 			<tr>
 				<td>{{Profe.RUTprof}}</td>
 				<td>{{Profe.NombreProf}}</td>
@@ -30,12 +33,14 @@
 				<td>{{Profe.EmailProf}}</td>
 				<td>{{Profe.NtelefonoProf}}</td>
 				<td>
-					<a href="http://127.0.0.1:8000/Modificar_Profesor/{{Profe.id}}/"><button>Modificar</button></a>
-					<a href="http://127.0.0.1:8000/Eliminar_Profesor/{{Profe.id}}/"><button>Eliminar</button></a>
+					<a href="/Modificar_Profesor/{{Profe.id}}/"><button>Modificar</button></a>
+					<a href="/Eliminar_Profesor/{{Profe.id}}/"><button>Eliminar</button></a>
 				</td>
 			</tr>
 			{% endfor %}
 		</table>
-		<a href="http://127.0.0.1:8000/">Regresar a la Pagina Principal</a>
+		<a href="/Inicio_Gestion/">Regresar a la Pagina de Gestion</a>
+		<p></p>
+		<a href="/">Regresar a la Pagina Principal</a>
 </body>
 </html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+	<h3 style="background-color:red; color:white; text-align:center;">Se requiere iniciar sesion:</h3>
+	<form action="" method="POST">{% csrf_token %}
+		<table>
+			{{form.as_table}}
+		</table>
+		<input type="submit" name="Login">
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{Est.NombreLocal}}</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Estado Mensual de Providencia</h1>
+
+		<table>
+			<tr>
+				<th>Año</th>
+                <th>Mes</th>
+                <th>Promedio Ingresos</th>
+                <th>Promedio Asistencia</th>
+                <th>Alumnos Totales</th>
+                <th>Nuevos Alumnos</th>
+                
+			</tr>
+			{% for Est in Lista_Providencia %}
+			<tr>
+                <td>{{Est.Anno}}</td>
+                <td>{{Est.Mes}}</td>
+                <td>{{Est.PromedioIngreso}}</td>
+                <td>{{Est.TasaAsist}}</td>
+                <td>{{Est.TotalAlumnos}}</td>
+                <td>{{Est.NuevosAlumnos}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+		<a href="/">Regresar a la Pagina Principal</a>
+</body>
+</html>

@@ -1,25 +1,51 @@
 from django.db import models
+import datetime
 
 # Create your models here.
+product_Genero= [('Hombre','Hombre'),('Mujer','Mujer'),]
+
 class Alumno(models.Model):
     RUT=models.CharField(max_length=13)
     Nombre=models.CharField(max_length=30)
-    Genero=models.CharField(max_length=6)
+    Genero=models.CharField(max_length=6,choices=product_Genero)
     Nacimiento=models.DateField()
     Profesion=models.CharField(max_length=50)
     DirPersonal=models.CharField(max_length=50)
     DirLaboral=models.CharField(max_length=50)
-    Asistencias=models.IntegerField()
     Email=models.EmailField(blank=True, null=True)
-    Ntelefono=models.IntegerField(blank=True, null=True)
+    Ntelefono=models.CharField(max_length=20,blank=True, null=True)
 
-
-class PagosAlumno(Alumno):
-    fields = ('Nombre','RUT')
-    FechaIngresos=models.DateField()
+class PagosAlumno(models.Model):
+    id_Alumno=models.IntegerField()
+    RUT=models.CharField(max_length=13)
+    Nombre=models.CharField(max_length=30)
+    FechaIngresos=models.DateField(default=datetime.date.today)
+    Local=models.CharField(max_length=30)
     ClasePagada=models.CharField(max_length=30)
+    Horario_Inicio=models.TimeField('%H:%M')
+    Horario_Termino=models.TimeField('%H:%M')
     IngresoAlumnno=models.IntegerField()
     MetodoPago=models.CharField(max_length=30)
+
+
+class Participante(models.Model):
+    Nombre=models.CharField(max_length=30)
+    Clase_Perteneciente=models.CharField(max_length=30)
+    Local=models.CharField(max_length=30)
+    Code_Clase=models.IntegerField()
+    Horario_Inicio=models.TimeField('%H:%M')
+    Horario_Termino=models.TimeField('%H:%M')
+    AsistPorcentaje=models.IntegerField()
+    AsistTotales=models.IntegerField()
+
+
+
+class ParticipantesEvent(models.Model):
+    EventInscrito=models.CharField(max_length=30)
+    ID_Event=models.IntegerField()
+    NombreParticipante=models.CharField(max_length=30)
+    Escena=models.CharField(max_length=30)
+
 
 
 

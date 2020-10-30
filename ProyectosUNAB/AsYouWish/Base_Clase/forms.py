@@ -5,4 +5,23 @@ from .models import Klase
 class ClaseForm(ModelForm):
 	class Meta:
 		model = Klase
-		fields = ['NombreClas','ClassInicio', 'ClassTermino', 'Profesor', 'AsistHombres', 'AsistMujeres', 'AsistTotales', 'AsistPorcentaje', 'PaseVencidos']
+		fields = [
+		'NombreClas',
+		'Local',
+		'ClassInicio', 
+		'ClassTermino',
+		'Profesor', 
+		'AsistHombres', 
+		'AsistMujeres', 
+		'AsistTotales', 
+		'AsistPorcentaje', 
+		'PaseVencidos']
+
+
+		labels={
+			'NombreClas' : 'Nombre de la Clase',
+			'Local': 'Local',
+			'ClassInicio' : 'Hora Inicio',
+			'ClassTermino': 'Hora Termino',
+			'Profesor' : 'Profesor Jefe',
+		}

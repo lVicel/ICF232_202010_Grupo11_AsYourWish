@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registrar-AYW</title>
+</head>
+<body>
+	<h1 style="background-color:red; color:white; text-align:center;">Modificar Nuevo Alumno</h1>
+	<p><strong>Instrucciones:</strong> Para modificar a un Alumno Antiguo, usted puede modificar cualquier Parametro que desee.<strong> Recuerde que el RUT & el Nombre son Obligatorios</strong>, mientras que el <strong>Email</strong> es opcional. Una vez ingresado los Parametros, se debe presionar el Boton <strong>"Enviar"</strong> para guardar cambios.</p>
+	<form action="" method="POST">{% csrf_token %}
+		<table>
+			{{ form}}
+		</table>
+		<br>
+		<input type="reset" name="Limpiar">
+		<input type="submit" name="Modificar">
+	</form>
+	<br>
+	<h4 style="background-color:silver; color:white; text-align:center;">{{mensaje}}</h4>
+	<br>
+	<br>
+	<a href="/Listado_Alumnos/">Regresar</a>
+
+
+</body>
+</html>

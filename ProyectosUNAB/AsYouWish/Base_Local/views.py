@@ -13,5 +13,5 @@ def Academias_AsYouWish(request):
 
 @login_required
 def Registro_Providencia(request):
-	Lst_Providencia=Local.objects.all()
+	Lst_Providencia = Local.objects.all()
 	return render(request,"Providencia.html",{"Lista_Providencia":Lst_Providencia})

@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Local(models.Model):
+    Local=models.CharField(max_length=35)
     Anno=models.IntegerField()
     Mes=models.CharField(max_length=11)
     NombreLocal=models.CharField(max_length=20)

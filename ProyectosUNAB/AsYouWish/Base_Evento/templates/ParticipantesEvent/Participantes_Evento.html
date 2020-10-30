@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Participantes</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Participantes del Evento</h1>
+
+		<p><strong>Total de Participantes Registrados Actualmente: {{Lista_HTML|length}}</strong></p>
+		
+		<a href="/Registrar_ParticipanteEvent/{{Event_Select.id}}"><button>Registrar Participante</button></a>
+        
+		<table>
+			<tr>
+				<th>Nombre del Alumno</th>
+				<th>Escena</th>
+			</tr>
+			{% for Prtic in Lista_HTML %}
+			<tr>
+                <td>{{Prtic.NombreParticipante}}</td>
+				<td>{{Prtic.Escena}}</td>	
+				<td><a href="/Eliminar_ParticipanteEvent/{{Prtic.id}}/"><button>Eliminar</button></a></td>
+			</tr>
+			{% endfor %}
+		</table>
+
+		<a href="/Listado_Eventos/">Regresar a la Lista de Eventos</a>
+		<p></p>
+		<a href="/Inicio_Gestion/">Regresar a la Pagina de Gestion</a>
+
+</body>
+</html>
