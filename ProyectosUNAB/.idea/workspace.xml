@@ -20,74 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="980c77d4-3e0e-4ac9-ab06-f3851e3b1aa1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PaginaPrincipal/readme - recomendado.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../PaginaPrincipal/readme - recomendado.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AsYouWish/AsYouWish/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/AsYouWish/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/AsYouWish/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/AsYouWish/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Alumno/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Alumno/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/migrations/0002_auto_20200918_1217.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/migrations/0003_alumno_genero.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/migrations/0004_pagosalumno.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Alumno/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/templates/Buscar_Alumno.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/templates/Lista_Alumno.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/templates/Modificar_Alumno.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/templates/Pagos/Lista_Pagos.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/templates/Registrar_Alumno.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Alumno/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Alumno/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Alumno/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Clase/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Clase/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Clase/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Clase/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Clase/migrations/0002_auto_20200920_2224.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Clase/migrations/0003_auto_20200926_1723.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Clase/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Clase/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Clase/templates/Buscar_Clase.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Clase/templates/Lista_Clase.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Clase/templates/Modificar_Clase.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Clase/templates/Registrar_Clase.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Clase/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Clase/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Clase/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Clase/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Evento/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Evento/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Evento/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Evento/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Evento/templates/Buscar_Evento.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Evento/templates/Lista_Evento.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Evento/templates/Modificar_Evento.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Evento/templates/Registrar_Evento.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Evento/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Evento/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Evento/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Evento/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Global/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Global/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Global/migrations/0002_auto_20200921_2127.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Global/templates/Registro_Estado.html" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Global/templates/Registro_Estado.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Global/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Global/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Inicio/templates/Inicio.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Inicio/templates/registration/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Inicio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Inicio/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Inicio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Inicio/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Local/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Local/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Local/migrations/0002_auto_20200921_2236.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Local/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Local/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Local/templates/Locales/Providencia/Providencia.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Local/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Local/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Local/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Local/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Profesor/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Profesor/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Profesor/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Profesor/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Profesor/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Profesor/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Profesor/templates/Buscar_Profesor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Profesor/templates/Lista_Profesor.html" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Profesor/templates/Lista_Profesor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Profesor/templates/Modificar_Profesor.html" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Profesor/templates/Modificar_Profesor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Profesor/templates/Registrar_Profesor.html" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Profesor/templates/Registrar_Profesor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Profesor/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Profesor/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_Profesor/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_Profesor/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_User/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_User/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_User/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_User/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_User/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_User/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Base_User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/Base_User/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/Debes arreglar Providencia.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsYouWish/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/AsYouWish/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
