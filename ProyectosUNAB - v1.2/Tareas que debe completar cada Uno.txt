@@ -1,0 +1,9 @@
+Tareas que deben arreglar cada uno:
+Cristobal: Para el Login, este tambien debe exigir el Seleccionar la Residencia. 
+Para el crear Usuarios,cuando se crea este tambien debe incluir con mediante un 
+"Select" Widgets la residencia del Usaurio
+
+Aldana: Debes completar el "Registrar Asistencia de Alumno"
+
+Ernesto: Al eliminar una Clase, este tambien eliminar a los Participantes
+que tiene registrados. Debes completarlo

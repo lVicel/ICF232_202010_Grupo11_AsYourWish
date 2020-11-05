@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Participantes</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Participantes de la Clase</h1>
+
+		<p><strong>Total de Clases Registrados Actualmente: {{Lista_HTML|length}}</strong></p>
+		<a href="/Registrar_Participante/{{Clase_Select.id}}/"><button>Registrar Participante</button></a>
+		<table>
+			<tr>
+				<th>Nombre del Alumno</th>
+				<th>Porcentaje de Asistencia</th>
+				<th>Asistencias Totales</th>
+			</tr>
+			{% for Prtic in Lista_HTML %}
+			<tr>
+                <td>{{Prtic.Nombre}}</td>
+				<td>{{Prtic.AsistPorcentaje}}</td>	
+                <td>{{Prtic.AsistTotales}}</td>
+				<td><a href="/Eliminar_Participante/{{Prtic.id}}/"><button>Eliminar</button></a></td>
+			</tr>
+			{% endfor %}
+		</table>
+		<a href="/Listado_Clases/">Regresar a la Lista de Clases</a>
+		<p></p>
+		<a href="/Inicio_Gestion/">Regresar a la Pagina de Gestion</a>
+</body>
+</html>

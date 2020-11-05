@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registrar-AYW</title>
+</head>
+<body>
+	<h1 style="background-color:red; color:white; text-align:center;">Modificar Profesor</h1>
+	<form action="" method="POST">{% csrf_token %}
+		<table>
+			{{form}}
+		</table>
+		<br>
+		<input type="reset" name="Limpiar">
+		<input type="submit" name="Modificar">
+	</form>
+	<br>
+	<h4 style="background-color:silver; color:white; text-align:center;">{{mensaje}}</h4>
+	<br>
+	<br>
+	<a href="/Listado_Profesores/">Regresar</a>
+	<p></p>
+	<a href="/Inicio_Gestion/">Regresar a la Pagina de Gestion</a>
+
+
+</body>
+</html>

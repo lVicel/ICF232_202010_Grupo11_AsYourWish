@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista-AYW</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Lista de Eventos Disponibles</h1>
+		<form method="GET" action="/Listado_Eventos/">
+            {{Filtro.form}}
+            <button class="btn btn-primary" type="submit">Buscar</button>
+        </form>
+		<a href="/Registrar_Evento/"><button>Registrar</button></a>
+
+		<table>
+			<tr>
+				<th>Nombre Evento</th>
+				<th>Fecha</th>
+				<th>Horario Inicio</th>
+				<th>Horario Termino</th>
+				<th>Local Encargado</th>
+				<th>Lugar</th>
+			</tr>
+            {% for Event in Lista_HTML %}
+			<tr>
+				<td>{{Event.NombreEvent}}</td>
+				<td>{{Event.FechaEvent}}</td>
+				<td>{{Event.EventInicio}}</td>
+				<td>{{Event.EventTermino}}</td>
+				<td>{{Event.LocalAdmin}}</td>
+				<td>{{Event.Direccion}}</td>
+				<td>
+					<a href="/Participantes_Evento/{{Event.id}}"><button>Particpantes</button></a>
+					<a href="/Modificar_Evento/{{Event.id}}/"><button>Modificar</button></a>
+					<a href="/Eliminar_Evento/{{Event.id}}/"><button>Eliminar</button></a>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+		<a href="/Inicio_Gestion/">Regresar a la Pagina de Gestion</a>
+		<p></p>
+		<a href="/">Regresar a la Pagina Principal</a>
+</body>
+</html>
