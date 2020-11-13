@@ -1,0 +1,3 @@
+1) http://nginx.org/en/docs/windows.html
+2) https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html
+3) https://stackoverflow.com/questions/34231393/how-to-change-the-django-rest-frameworks-default-url-to-a-custom

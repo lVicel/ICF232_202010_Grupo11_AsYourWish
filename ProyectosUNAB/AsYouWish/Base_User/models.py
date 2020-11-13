@@ -14,3 +14,4 @@ class Usuario(models.Model):
         ("5", "Residencia5"),
     )
     residencia=models.CharField(max_length=20,choices=Residencia_Choices,default='1')
+

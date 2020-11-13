@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL= "accounts/login/"
+
 LOGIN_REDIRECT_URL= '/' #Nos redirecciona a Nuestra Pagina de Inicio 
 LOGOUT_REDIRECT_URL= '/'
 

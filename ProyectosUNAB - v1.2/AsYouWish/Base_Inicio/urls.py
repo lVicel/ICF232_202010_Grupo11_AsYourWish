@@ -1,6 +1,6 @@
 from django.conf.urls import url#Importamos las Funciones "url"
 from django.urls import path, include#Importamos las Funciones de "Path" & "Include"
-from Base_Inicio import views #Importamos las Vistas(views.py) que se encuentran en App_Base
+from . import views #Importamos las Vistas(views.py) que se encuentran en App_Base
 
 urlpatterns=[
 path('accounts/', include('django.contrib.auth.urls')),#URL para el Login
