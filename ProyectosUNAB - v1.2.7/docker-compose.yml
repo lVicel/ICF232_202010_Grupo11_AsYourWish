@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  pythonDjango:
+    container_name: pythonDjango
+    image: lsuazo/pythondjango:latest
+    build:
+      context: pythonDjango
+    networks:
+      - net
+  AsYouWish:
+    depends_on:
+      - pythonDjango
+    container_name: AsYouWish
+    image: abravo/asyouwish:latest
+    build:
+      context: AsYouWish
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/AsYouWish
+    ports:
+      - "8000:8000"
+networks:
+  net:

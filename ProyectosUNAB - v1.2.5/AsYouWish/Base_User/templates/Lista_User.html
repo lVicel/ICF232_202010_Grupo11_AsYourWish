@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista-User</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">User List</h1>
+
+		<a href="/CrearUsuarios/"><button>Registrar Usuario</button></a>
+		<table>
+			<tr>
+				<th>Nombre</th>
+				<th>Email</th>
+				<th>Rut</th>
+			</tr>
+			{% for Usr in Lista_HTML %}
+			<tr>
+				<td>{{Usr.username}}</td>
+				<td>{{Usr.email}}</td>
+				<td>{{Usr.rut}}</td>
+				<td>{{Basico.user_set}}</td>
+				<td>{{Anfitrion.user_set}}</td>
+				<td>{{Director.user_set}}</td>
+
+
+				<td>
+					<a href="/Asignar_Basico/{{Usr.id}}/"><button>Asignar a Basico</button></a>
+					<a href="/Asignar_Anfitrion/{{Usr.id}}/"><button>Asignar a Anfitrion</button></a>
+					<a href="/Asignar_Director/{{Usr.id}}/"><button>Asignar a Director</button></a>
+					<a href="/Eliminar_Basico/{{Usr.id}}/"><button>Eliminar de Basico</button></a>
+					<a href="/Eliminar_Anfitrion/{{Usr.id}}/"><button>Eliminar de Anfitrion</button></a>
+					<a href="/Eliminar_Director/{{Usr.id}}/"><button>Eliminar de Director</button></a>
+					<a href="/Eliminar_Usuario/{{Usr.id}}/"><button>Eliminar</button></a>
+				</td>
+			</tr>
+			{% endfor %}
+			{% if messages %}
+  				<ul class="messages">
+    			{% for message in messages %}
+      				<li class="{{ message.tags }}">{{ message }}</li>
+    			{% endfor %}
+  				</ul>
+			{% endif %}
+		</table>
+		<a href="/">Regresar a la Pagina Principal</a>
+</body>
+</html>
