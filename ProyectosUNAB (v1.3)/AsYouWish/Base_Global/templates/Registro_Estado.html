@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Estado - Mensual</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Estado Mensual As You Wish</h1>
+
+		<a href="/Inicio_Gestion/">Regresar</a>
+		<table>
+			<tr>
+				<th>Año</th>
+                <th>Mes</th>
+                <th>Ingresos Totales</th>
+                
+			</tr>
+			{% for Est in Lista_HTML %}
+			<tr>
+                <td style="text-align:center;">{{Est.Anno}}</td>
+                <td style="text-align:center;">{{Est.Mes}}</td>
+                <td style="text-align:center;">{{Est.TotalIngresos}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+</body>
+</html>

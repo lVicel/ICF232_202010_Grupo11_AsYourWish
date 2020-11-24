@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista-AYW</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Lista de Profesores Registrados</h1>
+
+		<a href="/Inicio_Gestion/">Regresar</a>
+
+		<p><strong>Total de Profesores Registrados Actualmente: {{Lista_HTML|length}}</strong></p>
+		
+		<form method="GET" action="/Listado_Profesores/">
+            {{Filtro.form}}
+            <button class="btn btn-primary" type="submit">Buscar</button>
+        </form>
+
+		<a href="/Registrar_Profesor/"><button>Registrar</button></a>
+
+		<table>
+			<tr>
+				<th>RUT Profesor</th>
+				<th>Nombre Profesor</th>
+				<th>Genero</th>
+				<th>Local</th>
+				<th>Clase Asignada</th>
+				<th>Email Profesor</th>
+				<th>Telefono Profesor</th>
+			</tr>
+			{% for Profe in Lista_HTML %}
+			<tr>
+				<td style="text-align:center;">{{Profe.RUTprof}}</td>
+				<td style="text-align:center;">{{Profe.NombreProf}}</td>
+				<td style="text-align:center;">{{Profe.GeneroProf}}</td>
+				<td style="text-align:center;">{{Profe.LocalPerteneciente}}</td>
+				<td style="text-align:center;">{{Profe.ClaseProfesor}}</td>
+				<td style="text-align:center;">{{Profe.EmailProf}}</td>
+				<td style="text-align:center;">{{Profe.NtelefonoProf}}</td>
+				<td>
+					<a href="/Modificar_Profesor/{{Profe.id}}/"><button>Modificar</button></a>
+					<a href="/Eliminar_Profesor/{{Profe.id}}/"><button>Eliminar</button></a>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+</body>
+</html>

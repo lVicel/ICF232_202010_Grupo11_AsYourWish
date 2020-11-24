@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+</head>
+<body>
+	<h1 style="background-color:red; color:white; text-align:center;">Registrar Nuevo Usuario:</h1>
+	<a href="/Listado_Usario/">Regresar</a><p></p>
+	<form action="" method="POST">{% csrf_token %}
+		<input type="text" name="first_name" placeholder="Primer Nombre"><br>
+		<input type="text" name="last_name" placeholder="Apellido"><br>
+		<input type="text" name="username" placeholder="UserName"><br>
+		<input type="email" name="email" placeholder="email"><br>
+		<input type="password" name="password1" placeholder="Contraseña"><br>
+		<input type="password" name="password2" placeholder="Confirmar Contraseña"><br>
+		<!--<input type="text" name="group" placeholder="Seleccion Grupo"><br>-->
+		
+		<!--Aqui seleccionamos los Grupos-->
+		<input type="radio" id="Basico" name="group" value="Basico">
+		<label for="Basico"><strong>Basico</strong>[Solamente tendra Acceso para registrar Asistencias]</label><br>
+		
+		<input type="radio" id="Anfitrion" name="group" value="Anfitrion">
+		<label for="Anfitrion"><strong>Anfitrion</strong>[Solamente tendra Acceso unicamente para ver los Datos, pero no sera capaz de Modificar los Datos]</label><br>
+		
+		<input type="radio" id="Director" name="group" value="Director">
+		<label for="Director"><strong>Director</strong>[Tendra Acceso a todo, incluso podra Modificar los Datos]</label>
+
+		<p></p>
+		<input type="submit">
+	</form>
+
+	{% for messages in messages %}
+		<h4 style="background-color:silver; color:white; text-align:center;">{{messages}}</h4>
+	{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Clases/Locales</title>
+</head>
+
+<style>
+	body {
+		background-color: #171717;
+	  }
+
+.logout-form{
+    margin: 20px auto;
+    margin-bottom: 15px;
+
+}
+.start-form {
+	background: #ffffff;
+    margin: 50px auto;
+  	font-size: 15px;
+    padding: 10px;
+	border-radius: 5px;
+}
+.start-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    padding: 30px;
+	border-radius: 5px;
+}
+
+.start-form h3 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+	border-radius: 2px;
+	background-color: #ff05378f; 
+    color: #ffffff;
+	font-weight: bold;
+}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+table, th, td, a {
+  border-collapse: collapse;
+  border-spacing: 15px;
+  border: 1px  #171717;
+}
+
+.login-form h1 {
+	background-color: #ff0537cb;
+    color: #ffffff;
+}
+
+.button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+a:hover {
+	color:#ff0537cb;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+</style>
+
+<body>
+	<div class="d-flex justify-content-center">
+	<div class="h-auto d-inline-block">
+	<div class="start-form">
+		<h1 style="background-color:#ff0537cb; color:#ffffff; text-align:center;">Lista de Clases & Locales</h1>
+		<hr class="mt-1"/> <!--Separador-->
+		<a href="{% url 'logout' %}" style="float: right;">Cerrar Sesion</a>
+		<a href="/Listado_Alumnos/">Regresar</a>
+        
+		<table class="table table-hover">
+			<tr>
+				<th>Clase</th>
+				<th>Local</th>
+				<th>Inicio</th>
+				<th>Termino</th>
+				<th>Asistencias Totales</th>
+			</tr>
+			{% for ClassLocal in Lista_HTML %}
+			<tr>
+				<td style="text-align:center;">{{ClassLocal.Clase_Perteneciente}}</td>
+				<td style="text-align:center;">{{ClassLocal.Local}}</td>
+				<td style="text-align:center;">{{ClassLocal.Horario_Inicio}}</td>
+				<td style="text-align:center;">{{ClassLocal.Horario_Termino}}</td>
+                <td style="text-align:center;">{{ClassLocal.AsistTotales}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div></div></div>
+</body>
+</html>

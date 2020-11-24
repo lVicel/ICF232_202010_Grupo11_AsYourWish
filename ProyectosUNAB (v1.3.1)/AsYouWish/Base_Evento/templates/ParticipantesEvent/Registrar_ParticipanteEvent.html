@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reg-Participante</title>
+</head>
+<body>
+	<h1 style="background-color:red; color:white; text-align:center;">Registar Nuevo Participante</h1>
+	<a href="/Participantes_Evento/{{Event_Select.id}}/">Regresar</a>
+	<br>
+	<form action="" method="POST">{% csrf_token %}
+		<table>
+			{{ form.as_table}}
+		</table>
+		<br>
+		<input type="reset" name="Limpiar">
+		<input type="submit" name="Registar">
+	</form>
+	<br>
+	<h4 style="background-color:silver; color:white; text-align:center;">{{mensaje}}</h4>
+	<br>
+
+
+</body>
+</html>

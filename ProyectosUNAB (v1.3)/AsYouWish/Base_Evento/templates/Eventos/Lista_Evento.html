@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista-AYW</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Lista de Eventos Disponibles</h1>
+		<a href="/Inicio_Gestion/">Regresar</a>
+		<form method="GET" action="/Listado_Eventos/">
+            {{Filtro.form}}
+            <button class="btn btn-primary" type="submit">Buscar</button>
+        </form>
+		<a href="/Registrar_Evento/"><button>Registrar</button></a>
+
+		<table>
+			<tr>
+				<th>Nombre Evento</th>
+				<th>Fecha</th>
+				<th>Horario Inicio</th>
+				<th>Horario Termino</th>
+				<th>Local Encargado</th>
+				<th>Lugar</th>
+			</tr>
+            {% for Event in Lista_HTML %}
+			<tr>
+				<td style="text-align:center;">{{Event.NombreEvent}}</td>
+				<td style="text-align:center;">{{Event.FechaEvent}}</td>
+				<td style="text-align:center;">{{Event.EventInicio}}</td>
+				<td style="text-align:center;">{{Event.EventTermino}}</td>
+				<td style="text-align:center;">{{Event.LocalAdmin}}</td>
+				<td style="text-align:center;">{{Event.Direccion}}</td>
+				<td>
+					<a href="/Participantes_Evento/{{Event.id}}"><button>Participantes</button></a>
+					<a href="/Modificar_Evento/{{Event.id}}/"><button>Modificar</button></a>
+					<a href="/Eliminar_Evento/{{Event.id}}/"><button>Eliminar</button></a>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+
+</body>
+</html>

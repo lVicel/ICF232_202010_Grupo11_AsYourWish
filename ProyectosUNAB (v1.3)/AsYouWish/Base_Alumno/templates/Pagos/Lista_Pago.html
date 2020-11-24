@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pagos</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">{{Alumn_Select.Nombre}} - Pagos Realizados</h1>
+
+		<a href="/Listado_Alumnos/">Regresar</a>
+		<p></p>
+		<a href="/Registrar_Pago/{{Alumn_Select.id}}"><button>Registrar Pago</button></a>
+		<table>
+			<tr>
+				<th>Año</th>
+				<th>Mes</th>
+				<th>Local</th>
+				<th>Clase Pagada</th>
+				<th>N°Clases Pagadas</th>
+				<th>Ingreso</th>
+				<th>Metodo de Pago</th>
+				<th>Grupal</th>
+			</tr>
+			{% for Alumn in Lista_HTML %}
+			<tr>
+				<td>{{Alumn.Anno}}</td>
+				<th>{{Alumn.Mes}}</th>
+				<td>{{Alumn.Local}}</td>
+				<td>{{Alumn.ClasePagada}}</td>
+				<td>{{Alumn.Num_Clases_Pagadas}}</td>
+				<td>{{Alumn.IngresoAlumno}}</td>
+				<td>{{Alumn.MetodoPago}}</td>
+				<td>{{Alumn.Grupal}}</td>
+				<td>
+					<a href="/Eliminar_Pago/{{Alumn.id}}/"><button>Eliminar</button></a>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+</body>
+</html>

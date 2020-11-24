@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Participantes</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Participantes de la Clase</h1>
+		
+		<a href="/Listado_Clases/">Regresar</a>
+
+		<p><strong>Total de : {{Lista_HTML|length}}</strong></p>
+		<a href="/Registrar_Participante/{{Clase_Select.id}}/"><button>Registrar Participante</button></a>
+		<table>
+			<tr>
+				<th>Nombre del Alumno</th>
+				<th>Asistencias Totales</th>
+			</tr>
+			{% for Prtic in Lista_HTML %}
+			<tr>
+                <td style="text-align:center;">{{Prtic.Nombre}}</td>
+                <td style="text-align:center;">{{Prtic.AsistTotales}}</td>
+				<td><a href="/Eliminar_Participante/{{Prtic.id}}/"><button>Eliminar</button></a></td>
+			</tr>
+			{% endfor %}
+		</table>
+</body>
+</html>

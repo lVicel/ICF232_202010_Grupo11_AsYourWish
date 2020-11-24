@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filtro</title>
+</head>
+<body>
+        <h1 style="background-color:red; color:white; text-align:center;">Clase Disponibles</h1>
+        {% for messages in messages %}
+            <h4 style="background-color:silver; color:white; text-align:center;">{{messages}}</h4>
+        {% endfor %}
+        <a href="/">Regresar a la Pagina de Inicio</a>
+        <form method="GET" action="/Inicio_Asistencias/">
+            {{Filtro.form}}
+            <button class="btn btn-primary" type="submit">Buscar</button>
+        </form>
+            <table>
+                <tr>
+                    <th>Nombre de la Clase</th>
+                    <th>Local</th>
+                    <th>Horario Inicio</th>
+                    <th>Horario Termino</th>
+                    <th>Profesor en Jefe</th>
+                </tr>
+                {% for Claz in Lista_HTML %}
+                <tr>
+                    <td style="text-align:center;">{{Claz.NombreClas}}</td>
+                    <td style="text-align:center;">{{Claz.Local}}</td>
+                    <td style="text-align:center;">{{Claz.ClassInicio}}</td>
+                    <td style="text-align:center;">{{Claz.ClassTermino}}</td>
+                    <td style="text-align:center;">{{Claz.Profesor}}</td>
+                    <td>
+                        <a href="/Lista_Asistencias/{{Claz.id}}"><button>Participantes</button></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+
+</body>
+</html>

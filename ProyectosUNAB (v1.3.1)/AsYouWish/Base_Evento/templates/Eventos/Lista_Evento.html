@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Lista-AYW</title>
+</head>
+
+<style>
+	body {
+		background-color: #FFE9E4;
+	  }
+
+.logout-form{
+    margin: 20px auto;
+    margin-bottom: 15px;
+
+}
+.start-form {
+	background: #f7f7f7;
+    width: 340px;
+	width: 80%;
+    margin: 50px auto;
+  	font-size: 15px;
+    padding: 10px;
+	border-radius: 5px;
+}
+.start-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    padding: 30px;
+}
+
+.start-form h3 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+	border-radius: 2px;
+	background-color: #ff0537cb; 
+    color: #f7f7f7;
+	font-weight: bold;
+}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+}
+table, th, td {
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+
+.login-form h1 {
+	background-color: #ff0537cb;
+    color: #f7f7f7;
+}
+
+.button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+a:hover {
+	color:#FFFFFF;
+	text-decoration: none;
+}
+
+</style>
+
+<body>
+	<div class="start-form">
+		<h1 style="background-color: #ff0537cb; color: #f7f7f7; text-align:center;">Lista de Eventos Disponibles</h1>
+		<a href="/Inicio_Gestion/">Regresar</a> -
+		<a href="{% url 'logout' %}">Cerrar Sesion</a>
+		<form method="GET" action="/Listado_Eventos/">
+            {{Filtro.form}}
+            <button class="btn btn-primary" type="submit">Buscar</button>
+        </form>
+		<a href="/Registrar_Evento/"><button>Registrar</button></a>
+
+		<table class="table table-hover">
+			<tr>
+				<th>Nombre Evento</th>
+				<th>Fecha</th>
+				<th>Horario Inicio</th>
+				<th>Horario Termino</th>
+				<th>Local Encargado</th>
+				<th>Lugar</th>
+			</tr>
+            {% for Event in Lista_HTML %}
+			<tr>
+				<td style="text-align:center;">{{Event.NombreEvent}}</td>
+				<td style="text-align:center;">{{Event.FechaEvent}}</td>
+				<td style="text-align:center;">{{Event.EventInicio}}</td>
+				<td style="text-align:center;">{{Event.EventTermino}}</td>
+				<td style="text-align:center;">{{Event.LocalAdmin}}</td>
+				<td style="text-align:center;">{{Event.Direccion}}</td>
+				<td>
+					<a href="/Participantes_Evento/{{Event.id}}"><button>Participantes</button></a>
+					<a href="/Modificar_Evento/{{Event.id}}/"><button>Modificar</button></a>
+					<a href="/Eliminar_Evento/{{Event.id}}/"><button>Eliminar</button></a>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+
+</body>
+</html>

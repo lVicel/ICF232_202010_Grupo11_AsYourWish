@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clases/Locales</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Lista de Clases & Locales</h1>
+
+		<a href="/Listado_Alumnos/">Regresar</a>
+        
+		<table>
+			<tr>
+				<th>Clase</th>
+				<th>Local</th>
+				<th>Inicio</th>
+				<th>Termino</th>
+				<th>Asistencias Totales</th>
+			</tr>
+			{% for ClassLocal in Lista_HTML %}
+			<tr>
+				<td style="text-align:center;">{{ClassLocal.Clase_Perteneciente}}</td>
+				<td style="text-align:center;">{{ClassLocal.Local}}</td>
+				<td style="text-align:center;">{{ClassLocal.Horario_Inicio}}</td>
+				<td style="text-align:center;">{{ClassLocal.Horario_Termino}}</td>
+                <td style="text-align:center;">{{ClassLocal.AsistTotales}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Sign Up</title>
+</head>
+
+<style>
+	body {
+		background-color: #FFE9E4;
+	  }
+
+.logout-form{
+    margin: 20px auto;
+    margin-bottom: 15px;
+
+}
+.start-form {
+	background: #f7f7f7;
+    width: 340px;
+	width: 70%;
+    margin: 50px auto;
+  	font-size: 15px;
+    padding: 10px;
+	border-radius: 5px;
+}
+.start-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    padding: 30px;
+}
+
+.start-form h3 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+	border-radius: 2px;
+	background-color: #ff0537cb; 
+    color: #f7f7f7;
+	font-weight: bold;
+}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+}
+table, th, td {
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+
+.login-form h1 {
+	background-color: #ff0537cb;
+    color: #f7f7f7;
+}
+
+.button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+a:hover {
+	color:#FFFFFF;
+	text-decoration: none;
+}
+
+</style>
+
+<body>
+
+	<div class="start-form">
+	<h1 style="background-color:#ff0537cb; color:#f7f7f7; text-align:center;">Registrar Nuevo Usuario:</h1>
+	<a href="/Listado_Usario/">Regresar</a> -
+		<a href="{% url 'logout' %}">Cerrar Sesion</a>
+		<p></p>
+	<form action="" method="POST">{% csrf_token %}
+		<input type="text" name="first_name" placeholder="Primer Nombre"><br>
+		<input type="text" name="last_name" placeholder="Apellido"><br>
+		<input type="text" name="username" placeholder="UserName"><br>
+		<input type="email" name="email" placeholder="email"><br>
+		<input type="password" name="password1" placeholder="Contraseña"><br>
+		<input type="password" name="password2" placeholder="Confirmar Contraseña"><br>
+		<!--<input type="text" name="group" placeholder="Seleccion Grupo"><br>-->
+		
+		<!--Aqui seleccionamos los Grupos-->
+		<input type="radio" id="Basico" name="group" value="Basico">
+		<label for="Basico"><strong>Basico</strong>[Solamente tendra Acceso para registrar Asistencias]</label><br>
+		
+		<input type="radio" id="Anfitrion" name="group" value="Anfitrion">
+		<label for="Anfitrion"><strong>Anfitrion</strong>[Solamente tendra Acceso unicamente para ver los Datos, pero no sera capaz de Modificar los Datos]</label><br>
+		
+		<input type="radio" id="Director" name="group" value="Director">
+		<label for="Director"><strong>Director</strong>[Tendra Acceso a todo, incluso podra Modificar los Datos]</label>
+
+		<p></p>
+		<input type="submit">
+	</form>
+
+	{% for messages in messages %}
+		<h4 style="background-color:silver; color:#171717; text-align:center;">{{messages}}</h4>
+	{% endfor %}
+	</div>
+</body>
+</html>

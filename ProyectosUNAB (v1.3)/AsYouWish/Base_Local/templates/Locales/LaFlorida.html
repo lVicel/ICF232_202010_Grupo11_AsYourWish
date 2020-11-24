@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>La Florida</title>
+</head>
+<body>
+	
+		<h1 style="background-color:red; color:white; text-align:center;">Estado - La Florida</h1>
+		<a href="/Listado_Academias/">Regresar</a>
+		<table>
+			<tr>
+				<th>Año</th>
+				<th>Mes</th>
+				<th>Ingresos Totales</th>
+			</tr>
+			{% for PagosLc in Lista_HTML %}
+			<tr>
+                <td style="text-align:center;">{{PagosLc.Anno}}</td>
+                <td style="text-align:center;">{{PagosLc.Mes}}</td>
+                <td style="text-align:center;">{{PagosLc.TotalIngresos}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Participantes</title>
+</head>
+
+<style>
+	body {
+		background-color: #FFE9E4;
+	  }
+
+.logout-form{
+    margin: 20px auto;
+    margin-bottom: 15px;
+
+}
+.start-form {
+	background: #f7f7f7;
+    width: 340px;
+	width: 70%;
+    margin: 50px auto;
+  	font-size: 15px;
+    padding: 10px;
+	border-radius: 5px;
+}
+.start-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    padding: 30px;
+}
+
+.start-form h3 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+	border-radius: 2px;
+	background-color: #ff0537cb; 
+    color: #f7f7f7;
+	font-weight: bold;
+}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+}
+table, th, td {
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+
+.login-form h1 {
+	background-color: #ff0537cb;
+    color: #f7f7f7;
+}
+
+.button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+a:hover {
+	color:#FFFFFF;
+	text-decoration: none;
+}
+
+</style>
+
+<body>
+	<a href="{% url 'logout' %}">Cerrar Sesion</a>
+	<div class="start-form">
+		<h1 style="background-color:#ff0537cb; color:#f7f7f7; text-align:center;">Participantes de la Clase - {{Clase_Select.NombreClas}}</h1>
+
+		<a href="/Inicio_Asistencias/">Regresar</a>
+		<p><strong>Total de Clases Registrados Actualmente: {{Lista_HTML|length}}</strong></p>
+		<form method="POST", action= "/Registrar_Asistencia/" >
+			{% csrf_token %}
+			{% for Prtic in Lista_HTML %}
+			<!--<div><input type="checkbox" name = "participante" id="{{Prtic.id}}" onclick=""><label>{{Prtic.Nombre}}</label></div>-->
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="{{Prtic.id}}" id="{{Prtic.id}}" name="participante">
+				<label class="form-check-label" for="{{Prtic.id}}">{{Prtic.Nombre}}</label>
+			</div>
+			{% endfor %}
+			<a>
+				<p></p><button type="submit">Registrar Asistencia</button>
+			</a>
+		</form>
+	</div>
+</body>
+</html>

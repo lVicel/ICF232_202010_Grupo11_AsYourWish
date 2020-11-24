@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Lista-AYW</title>
+</head>
+
+<style>
+	body {
+		background-color: #171717;
+	  }
+
+.logout-form{
+    margin: 20px auto;
+    margin-bottom: 15px;
+
+}
+.start-form {
+	background: #ffffff;
+    margin: 50px auto;
+  	font-size: 15px;
+    padding: 10px;
+	border-radius: 5px;
+}
+.start-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    padding: 30px;
+	border-radius: 5px;
+}
+
+.start-form h3 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+	border-radius: 2px;
+	background-color: #ff05378f; 
+    color: #ffffff;
+	font-weight: bold;
+}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+table, th, td, a {
+  border-collapse: collapse;
+  border-spacing: 15px;
+  border: 1px  #171717;
+}
+
+.login-form h1 {
+	background-color: #ff0537cb;
+    color: #ffffff;
+}
+
+.button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+a:hover {
+	color:#ff0537cb;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+</style>
+
+<body>
+	<div class="d-flex justify-content-center">
+	<div class="h-auto d-inline-block">
+	<div class="start-form">
+	
+		<h1 style="background-color:#ff0537cb; color:#ffffff; text-align:center;">Lista de Alumnos Registrados</h1>
+		<hr class="mt-1"/> <!--Separador-->
+		<a href="{% url 'logout' %}" style="float: right;">Cerrar Sesion</a>
+		<a href="/Inicio_Gestion/">Regresar</a>
+
+		<p><strong>Total de Alumnos: {{Lista_HTML|length}}</strong></p>
+
+		<form method="GET" action="/Listado_Alumnos/">
+            {{Filtro.form}}
+            <button class="btn btn-primary" type="submit">Buscar</button>
+        </form>
+		<a href="/Registrar_Alumno/"><button type="button" class="btn btn-light" style="margin-bottom: 10px;">Crear Alumno Nuevo</button></a>
+		<table class="table table-hover">
+			<tr>
+				<th>RUT</th>
+				<th>Nombre</th>
+				<th>Genero</th>
+				<th>Nacimiento</th>
+				<th>Profesion</th>
+				<th>Direccion Personal</th>
+				<th>Direccion Laboral</th>
+				<th>E-mail</th>
+				<th>N° Telefono</th>
+			</tr>
+			{% for Alumn in Lista_HTML %}
+			<tr>
+				<td style="text-align:center;">{{Alumn.RUT}}</td>
+				<td style="text-align:center;">{{Alumn.Nombre}}</td>
+				<td style="text-align:center;">{{Alumn.Genero}}</td>
+				<td style="text-align:center;">{{Alumn.Nacimiento}}</td>
+				<td style="text-align:center;">{{Alumn.Profesion}}</td>
+				<td style="text-align:center;">{{Alumn.DirPersonal}}</td>
+				<td style="text-align:center;">{{Alumn.DirLaboral}}</td>
+				<td style="text-align:center;">{{Alumn.Email}}</td>
+				<td style="text-align:center;">{{Alumn.Ntelefono}}</td>
+				<td>
+					<a href="/Modificar_Alumno/{{Alumn.id}}/"><button type="button" class="btn btn-light">Modificar</button></a>
+					<a href="/Eliminar_Alumno/{{Alumn.id}}/"><button type="button" class="btn btn-light">Eliminar</button></a>
+					<a href="/Listado_Clases_Locales/{{Alumn.Nombre}}/"><button type="button" class="btn btn-light">Clases & Locales</button></a>
+					<a href="/Listado_Pagos/{{Alumn.id}}/"><button type="button" class="btn btn-light">Pagos</button></a>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div></div></div>
+</body>
+</html>

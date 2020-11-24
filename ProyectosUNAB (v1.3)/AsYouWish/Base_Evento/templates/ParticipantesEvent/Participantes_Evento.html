@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Participantes</title>
+</head>
+<body>
+		<h1 style="background-color:red; color:white; text-align:center;">Participantes del Evento</h1>
+
+		<a href="/Listado_Eventos/">Regresar</a>
+		<p><strong>Total de Participantes: {{Lista_HTML|length}}</strong></p>
+		
+		<a href="/Registrar_ParticipanteEvent/{{Event_Select.id}}"><button>Registrar Participante</button></a>
+		<table>
+			<tr>
+				<th>Participante</th>
+				<th>Escena</th>
+			</tr>
+			{% for Prtic in Lista_HTML %}
+			<tr>
+                <td style="text-align:center;">{{Prtic.NombreParticipante}}</td>
+				<td style="text-align:center;">{{Prtic.Escena}}</td>	
+				<td><a href="/Eliminar_ParticipanteEvent/{{Prtic.id}}/"><button>Eliminar</button></a></td>
+			</tr>
+			{% endfor %}
+		</table>
+
+
+</body>
+</html>
